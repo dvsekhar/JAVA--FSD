@@ -19,4 +19,34 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CallableStatementInsertDemo</display-name>
+    <servlet-name>CallableStatementInsertDemo</servlet-name>
+    <servlet-class>CallableStatementInsertDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CallableStatementInsertDemo</servlet-name>
+    <url-pattern>/callable-statement-insert-demo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateSelectDrop</display-name>
+    <servlet-name>CreateSelectDrop</servlet-name>
+    <servlet-class>CreateSelectDrop</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateSelectDrop</servlet-name>
+    <url-pattern>/CreateSelectDrop</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsertUpdateDelete</display-name>
+    <servlet-name>InsertUpdateDelete</servlet-name>
+    <servlet-class>InsertUpdateDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertUpdateDelete</servlet-name>
+    <url-pattern>/InsertUpdateDelete</url-pattern>
+  </servlet-mapping>
 </web-app>
