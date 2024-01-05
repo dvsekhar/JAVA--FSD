@@ -6,7 +6,7 @@
 
   <groupId>com</groupId>
   <artifactId>userhibernate</artifactId>
-  <version>1.0.0-beta</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>com.simpli Maven Webapp</name>
@@ -97,11 +97,11 @@
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
-		<!--<dependency>
+		<dependency>
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
 			<version>6.0.0</version>
-		</dependency>-->
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

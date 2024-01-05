@@ -25,8 +25,14 @@ public class UsersDAO {
 	 public UsersEntity getUserById(int id) {
 	        return (UsersEntity) sessionFactory.getCurrentSession().get(UsersEntity.class, id);
 	    }
+	 
+	 public void update(UsersEntity user) {
+		    sessionFactory.getCurrentSession().update(user);
+		}
 
-	     public void update(UsersEntity user) {
-	        sessionFactory.getCurrentSession().update(user);
-	    }
+	public void save(UsersEntity newUser) {
+		sessionFactory.getCurrentSession().save(newUser);
+		
+	}
+
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -34,19 +35,52 @@ public class UsersController {
 
 	}
 	
-	@RequestMapping(value = "/edituser/{id}", method = RequestMethod.GET)
-    public String editUser(@PathVariable int id, Model model) {
-		
-        UsersEntity user = userDAO.getUserById(id);
-        model.addAttribute("user", user);
-        return "edit-user"; 
+	@RequestMapping(value= "/adduser", method = RequestMethod.POST)
+    public String addUser(@RequestParam String fname, @RequestParam String lname, @RequestParam int age, @RequestParam long phone) {
+
+        UsersEntity newUser = new UsersEntity();
+        newUser.setFname(fname);
+        newUser.setLname(lname);
+        newUser.setAge(age);
+        newUser.setPhone(phone);
+
+        userDAO.save(newUser);
+
+        return "redirect:/listUsers";
+    }
+	
+	@RequestMapping(value = "/getUserById", method = RequestMethod.GET)
+    public String getUserById() {
+        return "getUserById";
     }
 
-	@RequestMapping(value = "/updateuser", method = RequestMethod.POST)
-	 public String updateUser(@ModelAttribute("user") UsersEntity user) {
-		
-		userDAO.update(user);
-	    return "list-users"; 
-	 }
+    @RequestMapping(value = "/edituser", method = RequestMethod.POST)
+    public String editUser(@RequestParam int userId, Model model) {
+        UsersEntity user = userDAO.getUserById(userId);
+        
+        if (user != null) {
+            model.addAttribute("user", user);
+            return "edituser"; 
+        } else {
+            return "userNotFound"; 
+        }
+    }
+
+	@PostMapping("/updateuser")
+	public String Update(@RequestParam int id, @RequestParam String fname, @RequestParam String lname, @RequestParam int age, @RequestParam long phone) {
+	    UsersEntity existingUser = userDAO.getUserById(id);
+	    
+	    if (existingUser != null) {
+	        existingUser.setFname(fname);
+	        existingUser.setLname(lname);
+	        existingUser.setAge(age);
+	        existingUser.setPhone(phone);
+	        userDAO.update(existingUser);
+	    }
+	    
+	    return "redirect:/listUsers";
+	}
+
+
 	
 }
