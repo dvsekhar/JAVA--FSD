@@ -22,7 +22,6 @@ public class ProductController {
 	@Autowired
 	EProductRepositry eProductRepositry;
 
-	// Supply a Single Product Details from the DB
 	@GetMapping(value="/details/{id}", produces = "application/json")
 	public EProduct showProduct(@PathVariable("id") long id) {
 
@@ -33,14 +32,10 @@ public class ProductController {
 			return product;
 		} else {
 			return new EProduct();
-			// return "Product with id = "+ id + " not found";
 		}
 
 	}
 	
-	
-
-	// Supply the full list of products from the DB
 	@GetMapping("/list")
 	public List<EProduct> showAllProducts() {
 
@@ -78,11 +73,11 @@ public class ProductController {
 			return savedProduct;
 		} else {
 			return new EProduct();
-			// return "Product with id = "+ id + " not found";
+			
 		}
 	}
 	
-	//CHALLENGE : Add the delete-product mapping
+	
 	@DeleteMapping("/delete-product/{id}")
 	public String deleteProduct(@PathVariable("id") long id) {
 		
