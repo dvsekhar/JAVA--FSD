@@ -1,0 +1,77 @@
+<script>
+
+    console.log("*** CALL DEMO *****");
+
+    // object literal
+    let employee1 = {
+
+        name: "EmpName1",
+        age: 67,
+        
+    };
+
+    function getDetails(retirementAge, x) { return `\n ${this.name} , ${this.age}  `};
+
+
+    let details = getDetails.call(employee1, 60, 10);
+    document.write(details);
+
+
+</script>
+
+<script>
+
+    console.log("*** APPLY DEMO ***** <br>");
+    document.write("<br> *** APPLY DEMO ***** <br>");
+
+    // object literal
+    let employee2 = {
+
+        name: "EmpName2",
+        age: 47,
+        
+    };
+
+    function getDetails2(retirementAge,x) { 
+        return `\n ${this.name} , ${this.age}, noOfYearsInServiceLeft=${retirementAge-this.age} x=${x}`
+    };
+
+
+    let details2 = getDetails2.apply(employee2,[60,10]);
+    document.write(details2);
+
+
+</script>
+
+<script>
+
+    console.log("*** BIND DEMO ***** <br>");
+    document.write("<br><br> *** BIND DEMO ***** <br>");
+
+    // Bind returns a function that can be used any number of times afterwards.
+
+    // object literal
+    let employee3 = {
+
+        name: "EmpName3",
+        age: 47,
+        
+    };
+
+    function getDetails3(retirementAge,x) { 
+        return `\n Inside getDetails3: ${this.name} , ${this.age}, noOfYearsInServiceLeft=${retirementAge-this.age} x=${x}`
+    };
+
+    
+    let f1 = getDetails3.bind(employee2,60,10);
+    document.write(f1());
+    document.write("<br>");
+    document.write(f1());
+
+
+</script>
+
+<br><br>
+And is the object literal is same as JSON? YES
+<br>
+And can the object literal be an array of object literals like JSON array? YES

@@ -1,0 +1,35 @@
+<html>
+
+
+<head>
+
+    <script>
+        let a=10;
+
+        function demoBlockScopeVariable(){
+            let b= 20;
+
+            {
+                let c =30;
+                alert("Inside the block " + c);
+            }
+
+            alert("Outside the block " + c); // if c was decl using let keyword, then this statement will be error. Not if var was used.
+        };
+
+        {
+            let z ="hello";
+            alert("Inside the block " +z);
+        }
+        alert("Outside the block " +z);//if z was decl using let keyword, then this statement will be error. Not if var was used.
+        
+
+
+    </script>
+
+</head>
+
+<body><button onclick="demoBlockScopeVariable()"> demo Block Scope Variable</button>
+</body>
+
+</html>

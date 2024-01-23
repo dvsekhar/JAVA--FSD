@@ -1,0 +1,20 @@
+<script>
+
+// Creating a Map
+let studentMap = new Map();
+
+studentMap.set('John', { age: 20, grade: 'A' });
+studentMap.set('Jane', { age: 22, grade: 'B' });
+studentMap.set('Bob', { age: 21, grade: 'C' });
+
+let johnObj = studentMap.get('John');
+document.write ( `John's age =  ${johnObj.age}`);
+
+let getAge = name => document.getElementById('result').textContent = studentMap.get(name).age;
+
+</script>
+
+<br>Name: <input name="name" id="name"> 
+<br>Result:<h2 id="result"></h2>
+<br><button onclick="getAge(document.getElementById('name').value)" > Click to Know the AGE</button>
+

@@ -1,0 +1,90 @@
+<html>
+
+
+<head>
+
+    <script>
+
+        var a = 10;
+        var x = 11;
+
+        // Deccision making statements
+        // using if else ..
+        // using switch
+        if (a > 10) {
+
+        } else {
+
+        };
+
+
+        switch (x) {
+
+            case 1: alert("Hi " + x);
+                break;
+            case 2: alert("Hi " + x);
+                break;
+            case 11: alert("Hi " + x);
+                break;
+            default: alert("Hi Default");
+
+        }
+
+        // Looping
+        for(var i=0;i<4;i++){
+            alert("Inside For Hi " + i); 
+        }
+
+        while(x>5){
+            alert("Inside while Hi " + x); 
+            x--;
+        };
+
+        do{
+            alert("Inside while Hi " + x); 
+            x--;
+        }while(x>5);
+
+
+        x=10;
+        while(x>5){
+            alert("Inside while-break Hi " + x); 
+            if(x==8) break;
+            x--;
+        };        
+
+    </script>
+
+
+    <script>
+        function checkNumber() {
+            
+            var inputNumber = document.getElementById('number').value;
+
+        
+            if (isNaN(inputNumber)) {
+                alert('Please enter a valid number.');
+                return;
+            }
+
+            
+            var resultMessage = (inputNumber % 2 === 0) ? 'Input number is even.' : 'Input number is odd.';
+
+            
+            document.getElementById('result').innerHTML = resultMessage;
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+    Num1: <input name="number" id="number"> 
+    <br>Result:<h2 id="result"></h2>
+    <button onclick="checkNumber()"> Is Number Even or Odd </button>
+
+
+</body>
+
+</html>

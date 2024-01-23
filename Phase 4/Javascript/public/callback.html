@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+    function greetingInEnglish(name) {
+
+        alert("Hello " + name);
+
+    }
+
+    function greetingInFrench(name) {
+
+        alert("Bonjour " + name);
+
+    }
+
+
+    function greetAPerson(name, func) {
+
+        func(name);
+
+    }
+
+    greetAPerson("Saboo", greetingInFrench);
+
+
+    function greetAPersonByHisLocation(name) {
+        let location = "";
+        if (location == "France")
+            greetingInFrench(name);
+        else
+            greetingInEnglish(name);
+    }
+
+
+</script>
+</body>
+</html>

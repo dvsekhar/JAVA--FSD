@@ -1,0 +1,19 @@
+<script>
+
+let str1= new String("Hello World Welcome to the Paradise."); // "hello"
+
+let str2 = str1.slice(1,7);
+
+document.write("str1 = "+str1);
+document.write("<br>");
+document.write("str1.slice(1,7) = "+str2);
+
+let str3 = str1.split(" ");
+
+str3.forEach( s => document.write("<li>"+s))
+
+let str4 = str1.split("W");
+document.write("<br><br>");
+str4.forEach( s => document.write("<li>"+s))
+
+</script>

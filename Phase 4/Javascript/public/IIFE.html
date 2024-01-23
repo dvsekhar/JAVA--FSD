@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+    let myrandom;
+
+    (
+        function f1() {
+
+            myrandom = Math.random();
+            // do some secure communication here.
+
+        }
+    )();
+
+    document.write("OTP is "+ myrandom);
+
+    f1(); // Error, f1 is an IIFE and has already been invoked. It can't be reused.
+
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<script>
+    document.write("**** SPREAD OPERATOR DEMO ***<br><br>")
+
+    let a1Arr = [6, 4, 5, 77, 23, 15, 17];
+
+    const add = (x, y, z, w) => x + y + z + w;
+
+    let ans = add(6, 4, 5, 77);
+    document.write(`<br> ans = ${ans} `);
+
+    let ans1 = add(...a1Arr);
+    document.write(`<br> ans1 = ${ans1} `);
+
+    document.write('<br>');
+    let arr2 = new Array(a1Arr);
+    document.write(arr2);
+
+    let arr3 = [...a1Arr];
+    document.write('<br>');
+    document.write(arr3);
+
+</script>
+
+<script>
+    let employee1 = {
+        name: "Saboo",
+        age: 56
+    };
+
+    let employee2 = { ...employee1 };
+
+    document.write('<br>');
+    document.write(`<br> employee1.name = ${employee1.name}`);
+    document.write(`<br> employee2.name = ${employee2.name}`);
+    employee1.name = "Rajnish";
+    document.write(`<br> employee1.name = ${employee1.name}`);
+    document.write(`<br> employee2.name = ${employee2.name}`);
+
+
+    let empArray = [
+        {
+            name: "Name1",
+            age: 56
+        },
+        {
+            name: "Name2",
+            age: 43
+        }
+
+    ];
+
+    let empArrayClone = [...empArray ] ;
+
+document.write(`<br><br> empArrayClone=${empArrayClone[0].name}`)
+
+</script>
+
+CHALENGE : Given an array arr1, create a duplicate of this array.
+what in the case it's a JSON array? The attributes will also be copied?
+
+can we copy this array to one new array using the spread operator? YES
+
+<script>
+    document.write("<br><br><br><br>**** REST OPERATOR DEMO ***<br><br>")
+
+
+    let a2Arr = [16, 4, 56, 77, 23, 15, 17];
+
+    let [a,b,...c] = a2Arr;
+
+    document.write(`<br> a= ${a}`);
+    document.write(`<br> b= ${b}`);
+    document.write(`<br> c= ${c}`);
+
+    
+    a2Arr.slice(3,4); // gives 4th element
+
+</script>

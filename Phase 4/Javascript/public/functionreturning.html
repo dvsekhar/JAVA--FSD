@@ -1,0 +1,38 @@
+<script>
+
+
+    function giveMeAddFunction(){
+
+        return function add(x,y){return x+y;};
+
+    };
+
+
+    let A = giveMeAddFunction(); 
+
+
+    document.write(A(2,3));
+
+
+    //// Another application - a function factory
+    let giveMeAFunction = type => {
+
+        if(type=="1")
+        return function add(x,y){return x+y;};
+
+        else
+        if(type=="2")
+        return function multiply(x,y){return x*y;};
+
+    };
+
+
+    let B = giveMeAFunction("1"); 
+    document.write("<br>B(2,3) =  " + B(2,3));
+    B = giveMeAFunction("2"); 
+    document.write("<br>B(2,3) =  " + B(2,3));
+
+
+
+
+</script>
