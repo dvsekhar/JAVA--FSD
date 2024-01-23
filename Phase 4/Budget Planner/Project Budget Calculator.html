@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///C:/Users/dvsek/eclipse-workspace/Budget%20Planner/public/main.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+	<meta name="viewport" content="width=device-width, initialscale=1">
+
+	<!--BootStrap CSS and JS files-->
+	<link href="./Project Budget Calculator_files/bootstrap.min.css" rel="stylesheet">
+	<script src="./Project Budget Calculator_files/bootstrap.bundle.min.js.download"></script>
+	
+	
+	<link href="./Project Budget Calculator_files/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="./Project Budget Calculator_files/font-awesome.min.css">
+	<script src="./Project Budget Calculator_files/main.js.download"></script>
+	
+<title>Project Budget Calculator</title>
+</head>
+<body>
+<div id="header" class="container">
+<header>
+    <h1><a href="file:///C:/Users/dvsek/eclipse-workspace/Budget%20Planner/public/main.html">Project Budget Calculator</a> <br> <p>By Sekhar </p></h1>
+
+<div class="nav">
+<a href="file:///C:/Users/dvsek/eclipse-workspace/Budget%20Planner/public/main.html#footer">About Us</a>
+
+</div>
+
+</header>
+</div>
+<div class="background">
+<div class="para">
+<h2>Free Project Budget Estimation Calculator</h2>
+<p>The most fundamental step in project management is creating a well-defined budget. 
+This free project budget estimate calculator helps you create estimates for 
+your projects and get a better handle on cost management.
+</p>
+</div>
+
+
+
+<div class="form">
+<h2>Project Estimation </h2><hr>
+    <form method="get" action="javascript:void(0);" onsubmit="budgetForm(event)">
+        <div class="form-section">
+            <label for="estimation">Estimation Id:</label>
+            <input type="text" id="estimation" name="estimation" placeholder="Estimation" required="">
+        </div>
+        <div class="form-section">
+            <label for="name">Project Name:</label>
+            <input type="text" id="name" name="name" placeholder="Project Name" required="">
+        </div>
+        <div class="form-section">
+            <label for="name1">Client Name:</label>
+            <input type="text" id="name1" name="name1" placeholder="Client Name" required="">
+        </div>
+        <div class="form-section">
+            <label for="startdate">Start Date:</label>
+            <input type="date" id="startdate" name="startdate" required="">
+        </div>
+        <div class="form-section">
+            <label for="enddate">End Date:</label>
+            <input type="date" id="enddate" name="enddate" required="">
+        </div><br><hr><br>
+        
+        <div class="mainaddon">
+        <h4>Click Add New Task to Add Expenses</h4>
+        <div id="formContainer">
+        
+        <div class="addon" id="addon1" style="display: none;">
+            
+            <div class="form-details">
+                <label for="task">Task Name:</label>
+                <input type="text" id="task1" name="task1" placeholder="Task Name">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="form-details">
+                <label for="cost">Cost Price:</label>
+                <input type="text" id="cost1" name="cost1" placeholder="Cost Per Day">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="form-details">
+                <label for="days">Estimate Duration:</label>
+                <input type="text" id="days1" name="days1" placeholder="Days">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="form-details">
+                <label for="total">Total:</label>
+                <span id="total1">0</span>
+            </div>
+        </div>
+        </div>
+        </div>
+        <br>
+        <div class="form-details">
+        <p onclick="addTask()">+ Add New Task</p><br>
+        <input class="cal" type="submit" value="Calculate">
+        </div>
+    </form>
+    
+    <div id="output"></div>
+    
+</div>
+
+<div class="para1">
+<h2>Frequently Asked Questions</h2><hr>
+
+<div class="onclick">
+    <p onclick="text1()">What is project estimation?</p>
+    <div id="ans1" style="display: none;">
+        Project estimation is a fundamental step in project management. 
+        It is the process of forecasting the cost of a project. 
+        It involves four major steps: planning, creating, managing, and improving.
+    </div><br>
+
+    <p onclick="text2()">What is the purpose of project estimation?</p>
+    <div id="ans2" style="display: none;">
+        Project estimation helps you get more control over cost management for your project. 
+        It helps you get an idea of the work, materials, and investment that will go into the project.
+    </div><br>
+
+    <p onclick="text3()">What are the benefits of project estimation?</p>
+    <div id="ans3" style="display: none;">
+        Preparing an estimate for your project helps you avoid last-minute and unforeseen expenditures. 
+        Comparing your estimate with the actual cost helps you stick to your budget, 
+        and also cut down on unnecessary spending. 
+        Creating accurate estimates ensures that your project costs do not interfere 
+        with the expected profit margin. You can also send project estimates to the 
+        customer for approval before starting the project.
+    </div><br>
+</div>
+
+</div>
+</div>
+<footer id="footer">
+<div class="address">
+<p>
+Street No: #1, Main Road,<br>
+India, 111111<br>
+</p>
+</div>
+<div class="copy">
+© 2002 Project Budget Calculator.<br>
+All Rights Reserved.
+</div>
+<div class="follow">
+Follow Us<br>
+<a href="file:///C:/Users/dvsek/eclipse-workspace/Budget%20Planner/public/main.html#" class="fa fa-facebook"></a> &nbsp;
+<a href="file:///C:/Users/dvsek/eclipse-workspace/Budget%20Planner/public/main.html#" class="fa fa-twitter"></a>&nbsp;
+<a href="file:///C:/Users/dvsek/eclipse-workspace/Budget%20Planner/public/main.html#" class="fa fa-instagram"></a>&nbsp;
+</div>
+</footer>
+
+
+
+</body></html>
