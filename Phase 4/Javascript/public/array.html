@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+    let fruitArray = new Array("Orange", "Apple", "Banana", "Grapes", "Mango");
+    //OR
+    let fruitArray2 = ["Orange", "Apple", "Banana", "Grapes", "Mango"];
+
+    // let 
+
+    fruitArray2.forEach(e => document.write("<li>" + e.toUpperCase()));
+
+    let slicedArray = fruitArray2.slice(2, 4);
+    document.write("<br><b>SLICED ARRAY from 2 to 4 positions</b>");
+    slicedArray.forEach(e => document.write("<li>" + e.toUpperCase()));
+
+    document.write("<br><b>SPLICING DEMO</b>");
+
+    let splicedArray = fruitArray2.splice(1, 3, "RED", "GREEN", "BLUE");
+    
+    document.write("<br><b>MODIFIED FRUITARRAY 2</b>");
+    fruitArray2.forEach(e => document.write("<li>" + e.toUpperCase()));
+
+    document.write("<br><b>SPLICED FROM  FRUITARRAY 2</b>");
+    splicedArray.forEach(e => document.write("<li>" + e.toUpperCase()));
+
+</script>
+
+
+<script>
+    document.write("<br><br><b>MAP and FILTER DEMO</b>");
+    const numbers = [1, 2, 3, 4, 5];
+
+    const numbersMapped  = numbers.map( e => e*e );
+
+    document.writeln(`numbersMapped = ${numbersMapped}`);
+
+    const numbersFiltered  = numbers.filter( e => e % 2 === 0 );
+
+    document.writeln(`<br>numbersFiltered = ${numbersFiltered}`);
+
+</script>
+</body>
+</html>
